@@ -1,6 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
+
+@if(Session::has('not_admin'))
+    <p class="bg-danger">{{session('not_admin')}}</p>
+@endif
+
 <div class="container">
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
